@@ -23,12 +23,11 @@ user_name="Mikołaj Bartnicki"
 user_signingkey="~/.ssh/id_ed25519.pub"
 
 write_log() {
-    echo "::::::::$0::${FUNCNAME[1]}()"
+    echo "$0 : ${FUNCNAME[1]}()"
 }
 
-main() {
+make_gitconfig_file() {
     write_log
-
     git config --global commit.gpgsign "$commit_gpgsign"
     git config --global core.autocrlf "$core_autocrlf"
     git config --global core.editor "$core_editor"
@@ -39,7 +38,11 @@ main() {
     git config --global user.email "$user_email"
     git config --global user.name "$user_name"
     git config --global user.signingkey "$user_signingkey"
+}
 
+main() {
+    write_log
+    make_gitconfig_file
     git config --global --list
 }
 

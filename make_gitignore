@@ -16,7 +16,7 @@ gitignore_url="https://www.toptal.com/developers/gitignore/api/$ignore_list"
 gitignore_file="$HOME/.gitignore"
 
 write_log() {
-    echo "::::::::$0::${FUNCNAME[1]}()"
+    echo "$0 : ${FUNCNAME[1]}()"
 }
 
 make_gitignore_file() {
