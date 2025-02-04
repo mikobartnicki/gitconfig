@@ -23,7 +23,7 @@ user_name="Mikołaj Bartnicki"
 user_signingkey="~/.ssh/id_ed25519.pub"
 
 write_log() {
-    echo "::::$0::${FUNCNAME[1]}()"
+    echo "::::::::$0::${FUNCNAME[1]}()"
 }
 
 main() {
